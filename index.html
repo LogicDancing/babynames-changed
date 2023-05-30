@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+	<meta charset="utf-8">
+
+	<!-- Google fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	
+	<!-- D3 -->
+	<script src="js/d3.v3.min.js"></script>
+<!--	<script src="https://d3js.org/d3.v7.min.js"></script>-->
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!-- Bootstrap 3 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	
+	<!-- Combobox script for the search box -->
+	<script src="js/bootstrap-combobox.js"></script>
+	<link href="css/bootstrap-combobox.css" type="text/css" rel="stylesheet">
+<!--	<script src="js/data.js"></script>-->
+	<link href="css/style.css" type="text/css" rel="stylesheet">
+	
+<body>
+
+	<div class="chartWrapper">
+		<div id="cont" class="container-fluid">
+
+			<!-- Introduction -->
+			<div class="row" style="padding: 5px 0px;">
+				<div class="col-sm-4 column">
+					<div class="row" style="padding: 0px 50px;">
+						<div class="col-md-12 column text-center">
+							<h2 class="titles">The 10 most popular baby names per year since 1880</h2>
+							<span class="subheader">USA</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-7 column">
+					<div class="row" style="margin-top:20px;">
+						<div class="col-md-6 column text-center">
+							<span style="font-size: 11px;">Color gives the approximate starting letter of the name</span>
+							<div class="colorLegend"></div>
+						</div>
+						<div class="col-md-6 column text-center">
+							<span style="font-size: 11px;">Line thickness stands for the highest position ever reached by a name</span>
+							<div class="widthLegend"></div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+			<hr>
+			
+			<!-- Search box and Boy / Girl button -->
+			<div class="row text-center">
+				<div class="col-sm-3 col-sm-offset-1 column text-center">
+					 <div class="form-group">			
+						<select id="searchBox" class="combobox input-large form-control" style="display: none;" onchange="searchEvent(this.value)">
+						  <option value="" selected="selected">Search name...</option>
+						</select>
+					  </div>
+				</div>
+			</div>
+			
+			<!-- Focus chart -->
+			<div class="row">
+				<div class="col-md-12 column text-center">
+					<div class="chart focus"></div>
+				</div>
+			</div>
+			
+			<!-- Context chart -->
+			<div class="row">
+				<div class="col-md-12 column text-center">
+					<div class="chart context"></div>
+				</div>
+			</div>
+			
+			<hr>
+			<hr>
+			
+		</div>
+	</div>
+
+	<script src="js/babynames.js"></script>
+</body>
+</html>
